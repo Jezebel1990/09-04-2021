@@ -3,7 +3,6 @@ package Exercicio;
 public class Animal {   
 	private String atrTipo;  
 	
-	     
 	     public Animal(String parTipo)
 	     {
 	          this.atrTipo = parTipo;
