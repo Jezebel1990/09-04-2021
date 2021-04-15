@@ -1,21 +1,32 @@
 package Exercicio;
 
 public class AnimalCavalo extends Animal{
-	private String relinxa;
-
-	public AnimalCavalo()
-	{	
+public AnimalCavalo()
+	   {	
+		
+		super("Cavalo");
 		}
-		public String getRelinxa() {
-			return relinxa;
-		}
-	   public void setRelinxa() {
-		this.relinxa = relinxa;
-	   }
-	   public String getNome()
-	   {
-		   return "Nome do animal: "+super.getNome()+" - Som: "+this.getRelinxa();
-	   }
-}
+		
+		@Override
+		public void chama(int num)
+		{
+		    for(int i=0;i<num;i++)
+		{
 
+		System.out.println("hiin in in hinir,hiin in in hinir");
+		  }
+		}
+		@Override
+		public void emite(String som)
+		{
+			if(som.charAt(0)=='9' || som.charAt(0)=='8')
+			{
+				System.out.println("\nEste animal deve correr...");
+		}	
+		else
+		{
+			System.out.println("\nAlipio Luz, tem 10 anos "+som);
+		}
+	}
+ }
 
