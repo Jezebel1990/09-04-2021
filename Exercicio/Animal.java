@@ -1,19 +1,21 @@
 package Exercicio;
 
-public class Animal {
+public class Animal {   
+	private String atrTipo;  
+	
 	     
-		public static char[] getNome;
-		private String nome;
-	     private String som;
-	     
-	     public String getNome() {
-	    	 return nome;
+	     public Animal(String parTipo)
+	     {
+	          this.atrTipo = parTipo;
 	     }
-	     public void setNome(final String nome) {
-	    	 this.nome = nome;
-	     }
-	    public void setSom(final String som) {
-	 	   this.som = som;
+	    abstract public void emite( String som) ;
+	    abstract public void chama(int  num);
+	    
+	    public String getAtrTipo() {
+	    	return atrTipo;
+		}
+	    public void setAtrTipo(String atrTipo) {
+	    	this.atrTipo = atrTipo;
 	    }
 }
 	
