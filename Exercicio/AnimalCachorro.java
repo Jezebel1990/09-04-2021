@@ -1,19 +1,29 @@
 package Exercicio;
 
 public class AnimalCachorro extends Animal {
-	private String late;
 	public AnimalCachorro()
 	{
-		
+	    super("Cachorro");
 	}
-	public String getLate() {
-		return late;
+	@Override
+	public void chama(int num)
+	{
+	    for(int i=0;i<num;i++)
+	{
+	       System.out.println("Au au, au au au.Au au, au au au");
 	}
-   public void setLate() {
-	this.late = late;
-   }
-   public String getNome()
-   {
-	   return "Nome do animal: "+super.getNome()+" - Som: "+this.getLate();
-   }
+	}
+	
+	@Override
+	public void emite(String som)
+	{
+		if(som.charAt(0)=='9' || som.charAt(0)=='8')
+		{
+			System.out.println("\nEste animal deve correr...");
+	}	
+	else
+	{
+		System.out.println("\nFuba Silva, tem 8 anos "+som);
+	}
+  }
 }
