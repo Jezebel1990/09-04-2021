@@ -2,26 +2,30 @@ package Exercicio;
 
 public class TesteAnimal {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		AnimalCachorro cachorro = new AnimalCachorro();
-		cachorro.setNome("Fuba Silva");
-		cachorro.setSom("Au au, au au au.Au au, au au au");
 		AnimalCavalo cavalo = new AnimalCavalo();
-		cavalo.setNome("Alipio Luz");
-		cavalo.setSom("hiin in in hinir,hiin in in hinir");
 		AnimalPreguica preguica = new AnimalPreguica();
-		preguica.setNome("Soneca de Jesus");
-		preguica.setSom("Uah ah a, a a Uah ah a");
 		
-		Animal[] animal = new Animal[2];
-		animal[0]=cachorro;
-		animal[1]=cavalo;
-		animal[2]=preguica;
+		Animal animal = null;
+		int num = (int) (Math.random()*3.0);
+		
+		System.out.println("\nO animal escolhido foi Nº: "+num);
+		
+		switch(num)
 		{
-		System.out.println(Animal.getNome);
+		case 0: animal = cachorro;break;
+		case 1: animal = cavalo;break;
+		case 2: animal = preguica;break;
+	
+		default: System.out.println("\nErro inesperado ...");
+		}
+		if(animal!=null)
+		{
+			animal.emite("- Emite o som:");
+			animal.chama(3);
 		}
 	}
 }
-
+	
 	
